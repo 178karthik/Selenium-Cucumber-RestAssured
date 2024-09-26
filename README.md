@@ -1,6 +1,6 @@
 **Cucumber BDD Framework for UI+API**  \
-**A.Selenium is used for UI Automation** \
-**B.RestAssured is used for API Automation** \
+**A. Selenium is used for UI Automation** \
+**B. RestAssured is used for API Automation** \
 
 To run Tests: \
 1.Install Java,Maven,Intellij \
