@@ -13,20 +13,16 @@ public class Object_Login extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(id = "txt-generic-login-username-v1")
-	public WebElement username;
+	@FindBy(id = "username")
+	public WebElement usernameInput;
 
-	@FindBy(id = "txt-generic-login-password-v1")
-	public WebElement password;
-	
-	@FindBy(id = "btn-generic-login-submit-v1")
-	public WebElement nextButton;
-	
+	@FindBy(id = "password")
+	public WebElement passwordInput;
 
-	@FindBy(id = "btn-generic-login-submit-v1")
-	public WebElement loginIn;
-	
-	@FindBy(xpath = "//textarea[@id='APjFqb']")
-	public WebElement search;
+	@FindBy(id = "login")
+	public WebElement loginButton;
+	@FindBy(xpath = "//h1[normalize-space()='Dashboard']")
+	public WebElement dashboardText;
+
 
 }

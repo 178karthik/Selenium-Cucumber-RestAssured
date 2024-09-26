@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.upp.base.BaseClass;
@@ -26,30 +27,15 @@ public class LoginToApplication extends BaseClass {
 
 	}
 
-	public void login(String userType, Properties prop) throws Exception{
+	public void login(String userName,String password) throws Exception{
 
-		// userType can be deal_maker, deal_cherk, txn_maker, txn_checker, txn_verifier
-//		String userNameKey = userType + ".username";
-//		String pwdKey = userType + ".password";
-		
-//		if(prop.getProperty("env").equalsIgnoreCase("qa")) {
-//			pwdKey="QA_"+userType+".password";
-//		}
-//		
-//		String userName = prop.getProperty(userNameKey);
-//		String password = prop.getProperty(pwdKey);
-//		applyExplicitWaitsUntilElementClickable(ol.username, Duration.ofSeconds(35));
-//		ol.username.sendKeys(userName);
-//		ol.nextButton.click();
-//		Thread.sleep(2000);nextButton
-//		ol.loginIn.click();
-//		applyExplicitWaitsUntilElementClickable(ol.username, Duration.ofSeconds(5));
-//
-//		ol.password.sendKeys(password);
-//		ol.loginIn.click();
-		
-		ol.search.sendKeys("karthik");
 
+		
+		ol.usernameInput.sendKeys(userName);
+		ol.passwordInput.sendKeys(password);
+		ol.loginButton.click();
+		applyExplicitWaitsUntilElementClickable(ol.dashboardText,Duration.ofSeconds(10));
+		ol.dashboardText.isDisplayed();
 	}
 
 }
